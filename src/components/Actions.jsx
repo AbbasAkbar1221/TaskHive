@@ -60,7 +60,7 @@ const Actions = ({
 
         <div className="text-center">
           <h2 className="text-lg font-bold mb-1">Remaining Todos</h2>
-          <p className="text-gray-300">{todos.length} item left</p>
+          <p className="text-gray-300">{todos.filter((todo)=> !todo.completed).length} item left</p>
         </div>
 
         <div className="space-y-1">
