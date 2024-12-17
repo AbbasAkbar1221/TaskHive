@@ -11,21 +11,24 @@ const Actions = ({
   const dispatch = useDispatch();
 
   const handleAllCompleted = () => {
-    const updatedTodos = todos.map((todo) => ({
-      ...todo,
-      completed: true,
-    }));
+    // const updatedTodos = todos.map((todo) => ({
+    //   ...todo,
+    //   completed: true,
+    // }));
 
-    dispatch(setAllCompleted(updatedTodos));
+    dispatch(setAllCompleted());
   };
 
-  const handleAllClear = () => {
-    const updatedTodos = todos.map((todo) => ({
-      ...todo,
-      completed: false,
-    }));
+  // const handleAllClear = () => {
+  //   const updatedTodos = todos.map((todo) => ({
+  //     ...todo,
+  //     completed: false,
+  //   }));
 
-    dispatch(setAllClear(updatedTodos));
+  //   dispatch(setAllClear(updatedTodos));
+  // };
+  const handleAllClear = () => {
+    dispatch(setAllClear());
   };
 
   const handleFilterChange = (status) => {

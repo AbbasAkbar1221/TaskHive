@@ -47,11 +47,11 @@ export const todoSlice = createSlice({
                 completed:true
             }))
         },
-        setAllClear: (state) =>{
-            state.todos = state.todos.map((todo)=>({
-                ...todo,
-                completed:false
-            }))
+        setAllClear: (state, action) =>{
+            state.todos = state.todos.filter((todo)=>(
+                !todo.completed
+            ))
+            
         },
 
     }
